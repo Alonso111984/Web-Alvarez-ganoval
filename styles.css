@@ -513,7 +513,7 @@ a{color:inherit}
 }
 .pie__fila{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
 .pie__marca{display:flex;align-items:center;gap:15px}
-.pie__marca img{width:72px;height:72px;object-fit:contain;flex:none}
+.pie__marca img{width:96px;height:96px;object-fit:contain;flex:none}
 .pie a{color:#A8B0B8;text-decoration:none}
 .pie a:hover{color:var(--nogal-luz)}
 
@@ -568,7 +568,7 @@ a{color:inherit}
   .bandeja .boton{flex:1;padding:14px 16px;font-size:14.5px}
   /* stretch, no flex-start: si no, el texto largo no salta de linea y se sale */
   .pie__fila{flex-direction:column;align-items:stretch;gap:14px}
-  .pie__marca img{width:60px;height:60px}
+  .pie__marca img{width:78px;height:78px}
   /* aire abajo para que el boton flotante no se pare encima del texto del pie */
   .pie{padding-bottom:92px}
   .pregunta__cuerpo>div{padding-right:10px}
