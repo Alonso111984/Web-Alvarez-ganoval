@@ -357,6 +357,32 @@
     });
   }, "faq");
 
+  /* ---------- Botón flotante de WhatsApp ----------
+     No aparece de entrada: en la portada ya está el botón grande y
+     taparlo con otro solo estorba. Sale cuando el usuario baja. */
+  seguro(function () {
+    var fab = $("#flotante");
+    if (!fab) return;
+    var portada = $(".portada");
+    var tic = false;
+
+    function revisar() {
+      tic = false;
+      var limite = portada ? portada.offsetHeight * 0.55 : 480;
+      if (window.scrollY > limite) fab.classList.add("dentro");
+      else fab.classList.remove("dentro");
+    }
+    function pedir() {
+      if (tic) return;
+      tic = true;
+      window.requestAnimationFrame(revisar);
+    }
+
+    window.addEventListener("scroll", pedir, { passive: true });
+    window.addEventListener("resize", pedir);
+    revisar();
+  }, "flotante");
+
   /* ---------- Aparición al entrar en pantalla ---------- */
   seguro(function () {
     var piezas = $$(".surge");
